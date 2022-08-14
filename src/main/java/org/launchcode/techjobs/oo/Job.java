@@ -3,7 +3,12 @@ package org.launchcode.techjobs.oo;
 import java.util.Objects;
 
 public class Job {
-
+    // HashMap<String, String> job;
+    // job.put("name", "Job Name");
+    // job.put("employer", "Bob's Furniture");
+    // job.put("salary", "75000");
+    // job.put("employer", "Different Employer");
+    // job.get("banana");
     private int id;
     private static int nextId = 1;
 

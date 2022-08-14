@@ -9,7 +9,7 @@ public class Employer {
     private String value;
 
     public Employer() {
-        id = nextId;
+        id = nextId; // id = 1
         nextId++;
     }
 
