@@ -98,4 +98,31 @@ public class Job {
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
     }
+
+    // TODO: Add toString here
+
+    @Override
+    public String toString() {
+        String nameData = toStringWithDefault(name, "Data not available");
+        String employerData = toStringWithDefault(employer, "Data not available");
+        String locationData = toStringWithDefault(location, "Data not available");
+        String positionTypeData = toStringWithDefault(positionType, "Data not available");
+        String coreCompetencyData = toStringWithDefault(coreCompetency, "Data not available");
+
+        return "\n" +
+                "ID: " + id + "\n" +
+                "Name: " + nameData + "\n" +
+                "Employer: " + employerData + "\n" +
+                "Location: " + locationData + "\n" +
+                "Position Type: " + positionTypeData + "\n" +
+                "Core Competency: " + coreCompetencyData +
+                "\n";
+    }
+
+    private static String toStringWithDefault(Object obj, String defaultValue) {
+        if (obj == null) {
+            return defaultValue;
+        }
+        return obj.toString();
+    }
 }
