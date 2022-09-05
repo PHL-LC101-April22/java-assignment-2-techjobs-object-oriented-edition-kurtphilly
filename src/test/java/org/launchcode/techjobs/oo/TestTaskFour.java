@@ -24,7 +24,6 @@ public class TestTaskFour extends AbstractTest {
     public void testTestSettingJobIdExists () throws ClassNotFoundException {
         Class jobTestClass = getClassByName("test.JobTest");
         Method testSettingJobIdMethod = null;
-
         try {
             testSettingJobIdMethod = jobTestClass.getMethod("testSettingJobId");
         } catch (NoSuchMethodException e) {

@@ -120,7 +120,7 @@ public class Job {
     }
 
     private static String toStringWithDefault(Object obj, String defaultValue) {
-        if (obj == null) {
+        if (obj == null || obj.toString().isEmpty()) {
             return defaultValue;
         }
         return obj.toString();

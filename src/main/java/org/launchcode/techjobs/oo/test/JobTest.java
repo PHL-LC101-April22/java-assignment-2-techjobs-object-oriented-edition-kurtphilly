@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class JobTest {
 
     @Test
-    public void testSettingJobID() {
+    public void testSettingJobId() {
 
         // {data-type} {var-name} = {value};
 
@@ -29,6 +29,10 @@ public class JobTest {
         // {data-type} {var-name} = {value};
         Job job = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality Control"), new CoreCompetency("Persistence"));
         assertTrue(job instanceof Job);
+        assertTrue(job.getEmployer() instanceof Employer);
+        assertTrue(job.getLocation() instanceof Location);
+        assertTrue(job.getCoreCompetency() instanceof CoreCompetency);
+        assertTrue(job.getPositionType() instanceof PositionType);
         assertEquals("Product tester", job.getName());
         assertEquals("ACME", job.getEmployer().getValue());
         assertEquals("Desert", job.getLocation().getValue());
